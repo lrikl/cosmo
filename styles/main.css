@@ -30,14 +30,14 @@ button {
 
 @font-face {
   font-family: "Inter";
-  src: url("../../static/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype-variations");
+  src: url("../static/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype-variations");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../../static/fonts/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype-variations");
+  src: url("../static/fonts/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype-variations");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
@@ -108,7 +108,7 @@ img, svg {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: url("../../static/img/desktop-banner.png") no-repeat center/cover;
+  background: url("../static/img/desktop-banner.png") no-repeat center/cover;
 }
 
 .banner::before {
@@ -146,7 +146,7 @@ img, svg {
 @media (max-width: 1023px) {
   .banner {
     min-height: 400px;
-    background-image: url("../../static/img/tablet-banner.png");
+    background-image: url("../static/img/tablet-banner.png");
   }
   .banner__title {
     font-size: 3rem;
@@ -155,7 +155,7 @@ img, svg {
 @media (max-width: 767px) {
   .banner {
     min-height: 320px;
-    background-image: url("../../static/img/mobile-banner.png");
+    background-image: url("../static/img/mobile-banner.png");
   }
 }
 .mobile-menu {
@@ -604,7 +604,7 @@ img, svg {
 }
 .header__menu-item::before {
   content: "";
-  background: url("../../static/animation/card-animation.svg") no-repeat center/contain;
+  background: url("../static/animation/card-animation.svg") no-repeat center/contain;
   position: absolute;
   left: 0;
   top: 50%;
@@ -613,7 +613,7 @@ img, svg {
   height: 45px;
 }
 .header__menu-item:nth-child(2n):before {
-  background-image: url("../../static/animation/ball-animation.svg");
+  background-image: url("../static/animation/ball-animation.svg");
   width: 16px;
   height: 16px;
   left: 6px;
