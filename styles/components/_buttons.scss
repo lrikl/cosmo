@@ -1,0 +1,36 @@
+.button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+
+    &--signup {
+        background-color: $color-red;
+        color: $color-white;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+
+    &--login {
+        color: $color-black;
+        background-color: $color-lt-blue;
+        
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+
+    &--gradient {
+            background-image: linear-gradient(to right, $color-fiolet, $color-dark-fiolet);
+            color: $color-white;
+    }
+
+    &--gradient:hover {
+        box-shadow: 0 0 15px rgba(138, 43, 226, 0.7);
+        transform: translateY(-2px);
+    }
+}

@@ -1,0 +1,70 @@
+.categories {
+    padding: 24px 0;
+}
+
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 540px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.category-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    text-decoration: none;
+    display: block;
+    background-color: $color-dark-item;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba($color-lt-blue, 0.2);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    span {
+        display: block;
+        text-align: center;
+        color: $color-white;
+        font-weight: 600;
+        padding: 16px 8px;
+    }
+
+    &.shine::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -150%; 
+        z-index: 2;
+        display: block;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+        transform: skewX(-25deg);
+        pointer-events: none;
+    }
+
+    &.shine:hover::before {
+        animation: shine-effect 2s forwards;
+    }
+}
+
+@keyframes shine-effect {
+    100% {
+        left: 150%;
+    }
+}

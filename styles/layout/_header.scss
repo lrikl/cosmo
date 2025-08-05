@@ -1,0 +1,223 @@
+.header {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid $color-border-dark;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 70px;
+        position: relative;
+    }
+
+    &__logo img {
+        width: 160px;
+    }
+
+    &__nav,
+    &__actions {
+        display: none;
+    }
+
+    &__menu-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__menu-item {
+        position: relative;
+        padding-left: 30px;
+    }
+
+    &__menu-item::before {
+        content: '';
+        background: url('../../static/animation/card-animation.svg') no-repeat center/contain;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 45px;
+    }
+
+    &__menu-item:nth-child(2n):before {
+        background-image: url('../../static/animation/ball-animation.svg');
+        width: 16px;
+        height: 16px;
+        left: 6px;
+    }
+
+    &__menu-link {
+        font-size: 1.25rem;
+        color: $color-white;
+        font-weight: 500;
+    }
+
+    &__actions {
+        flex-direction: column;
+        gap: 15px;
+        width: 80%;
+        max-width: 250px;
+    }
+
+    &__mobile-toggle {
+        display: block;
+        background: none;
+        border: none;
+        padding: 0;
+        width: 24px;
+        height: 24px;
+        position: relative;
+        z-index: 101;
+
+        &-icon,
+        &-icon::before,
+        &-icon::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: $color-white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        &-icon {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &-icon::before { top: -10px; }
+        &-icon::after { bottom: -10px; }
+    }
+
+    &.is-menu-open {
+        .header__container {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: $color-bg; 
+            padding: 32px 16px; 
+            min-height: 100vh;
+            gap: 30px;
+            z-index: 100;
+        }
+        
+        .header__nav,
+        .header__actions {
+            display: flex;
+        }
+        
+        .header__nav { order: 2; }
+        .header__actions { order: 3; }
+        
+        .header__logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .header__mobile-toggle {
+            align-self: flex-end;
+        }
+        
+        .header__mobile-toggle-icon {
+            background-color: transparent;
+            
+            &::before {
+                top: 0;
+                transform: rotate(45deg);
+            }
+            &::after {
+                bottom: 0;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        &__mobile-toggle {
+            display: none;
+        }
+
+        &__container {
+            flex-direction: row;
+            position: relative;
+            height: auto;
+            width: 100%;
+            background: none;
+            padding: 0 20px;
+            z-index: auto; 
+        }
+        
+        &__logo {
+            position: static;
+        }
+
+        &__nav,
+        &__actions {
+            display: flex;
+            flex-direction: row;
+            position: static;
+            height: auto;
+            width: auto;
+            background: none;
+            padding: 0;
+        }
+
+        &__menu-list {
+            flex-direction: row;
+            gap: 16px;
+        }
+
+        &__menu-link {
+            font-size: 1rem;
+            position: relative;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $color-lt-blue;
+                &::after {
+                    width: 100%;
+                }
+            }
+            
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -4px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $color-lt-blue;
+                transition: width 0.3s ease;
+            }
+        }
+
+        &__actions {
+            gap: 12px;
+            width: auto;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        &__nav {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
