@@ -155,7 +155,7 @@ img, svg {
   font-size: 1.25rem;
   border-radius: 32px;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
   .banner {
     min-height: 400px;
     background-image: url("../static/img/tablet-banner.png");
