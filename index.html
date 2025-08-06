@@ -24,8 +24,8 @@
             </nav>
 
             <div class="header__actions">
-                <button class="button button--login">Login</button>
-                <button class="button button--signup">Registration</button>
+                <button class="button button--login" data-popup-target="login-popup">Login</button>
+                <button class="button button--signup" data-popup-target="register-popup">Registration</button>
             </div>
 
             <button id="mobile-menu-button" class="header__mobile-toggle">
@@ -44,7 +44,7 @@
             <div class="banner">
                 <div class="banner__content">
                     <h2 class="banner__title">Free bonus</h2>
-                    <a href="#" class="button button--gradient banner__button">Get bonus</a>
+                    <a href="#" class="button button--gradient banner__button" data-popup-target="bonus-popup">Get bonus</a>
                 </div>
             </div>
 
@@ -53,34 +53,51 @@
             </div>
         </section>
 
-        <section class="categories">
+        <section class="section">
             <div class="container">
-                <div class="category-list">
-                    <a href="#" class="category-item shine">
-                        <img src="./static/img/category1.png" alt="Sports">
-                        <span>Sports</span>
-                    </a>
-                    <a href="#" class="category-item shine">
-                        <img src="./static/img/category2.png" alt="Casino">
-                        <span>Casino</span>
-                    </a>
-                    <a href="#" class="category-item shine">
-                        <img src="./static/img/category3.png" alt="Games">
-                        <span>Games</span>
-                    </a>
-                    <a href="#" class="category-item shine">
-                        <img src="./static/img/category4.png" alt="Live Casino">
-                        <span>Live Casino</span>
-                    </a>
-                    <a href="#" class="category-item shine">
-                        <img src="./static/img/category5.png" alt="ESports">
-                        <span>ESports</span>
-                    </a>
-                    <a href="#" class="category-item shine">
-                        <img src="./static/img/category6.png" alt="Live">
-                        <span>Live</span>
-                    </a>
-                </div>
+                <ul class="category-list">
+                    <li class="category-list__item">
+                        <a href="#" class="category-list__link shine">
+                            <img src="./static/img/category1.png" alt="" class="category-list__img">
+                            <span class="category-list__text">Sports</span>
+                        </a>
+                    </li>
+
+                    <li class="category-list__item">
+                        <a href="#" class="category-list__link shine">
+                            <img src="./static/img/category2.png" alt="" class="category-list__img">
+                            <span class="category-list__text">Casino</span>
+                        </a>
+                    </li>
+
+                    <li class="category-list__item">
+                        <a href="#" class="category-list__link shine">
+                            <img src="./static/img/category3.png" alt="" class="category-list__img">
+                            <span class="category-list__text">Games</span>
+                        </a>
+                    </li>
+
+                    <li class="category-list__item">
+                        <a href="#" class="category-list__link shine">
+                            <img src="./static/img/category4.png" alt="" class="category-list__img">
+                            <span class="category-list__text">Live Casino</span>
+                        </a>
+                    </li>
+
+                    <li class="category-list__item">
+                        <a href="#" class="category-list__link shine">
+                            <img src="./static/img/category5.png" alt="" class="category-list__img">
+                            <span class="category-list__text">ESports</span>
+                        </a>
+                    </li>
+
+                    <li class="category-list__item">
+                        <a href="#" class="category-list__link shine">
+                            <img src="./static/img/category6.png" alt="" class="category-list__img">
+                            <span class="category-list__text">Live</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -206,9 +223,7 @@
         <div class="popup__content">
             <button class="popup__close-btn" data-close-popup></button>
             <h2 class="popup__title" id="bonus-popup-title">Your Bonus is Here!</h2>
-            <p class="popup__text">
-                Congratulations! You have received a special bonus. Register now to claim your free spins and a welcome package.
-            </p>
+            <p class="popup__text">Congratulations! You have received a special bonus. Register now to claim your free spins and a welcome package.</p>
             <button class="button button--signup popup__cta-btn" data-popup-target="register-popup">Register and Claim</button>
         </div>
     </div>
@@ -227,11 +242,9 @@
                     <label for="login-password" class="popup__label">Password</label>
                     <input type="password" id="login-password" class="popup__input" required>
                 </div>
-                <button type="submit" class="button button--login popup__cta-btn">Login</button>
+                <button type="submit" class="button button--login popup__cta-btn" data-popup-target="login-popup">Login</button>
             </form>
-            <p class="popup__switch-text">
-                Don't have an account? <a href="#" class="popup__switch-link" data-popup-target="register-popup">Register</a>
-            </p>
+            <p class="popup__switch-text">Don't have an account? <a href="#" class="popup__switch-link" data-popup-target="register-popup">Register</a></p>
         </div>
     </div>
 
@@ -255,9 +268,7 @@
                 </div>
                 <button type="submit" class="button button--signup popup__cta-btn">Create Account</button>
             </form>
-            <p class="popup__switch-text">
-                Already have an account? <a href="#" class="popup__switch-link" data-popup-target="login-popup">Login</a>
-            </p>
+            <p class="popup__switch-text">Already have an account? <a href="#" class="popup__switch-link" data-popup-target="login-popup">Login</a></p>
         </div>
     </div>
 

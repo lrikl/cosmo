@@ -7,6 +7,7 @@
 a {
     text-decoration: none;
     color: inherit;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -26,4 +27,15 @@ button {
     -moz-osx-font-smoothing: inherit;
     -webkit-appearance: none;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li::marker {
+    content: none;
 }

@@ -1,14 +1,14 @@
-@import 'base/variables';
-@import 'base/reset';
-@import 'base/base';
+@import 'base/_variables';
+@import 'base/_reset';
+@import 'base/_base';
 
-@import 'components/buttons';
-@import 'components/banner';
-@import 'components/mobile-menu';
-@import 'components/popups';
-@import 'components/categories';
+@import 'components/_buttons';
+@import 'components/_banner';
+@import 'components/_mobile-menu';
+@import 'components/_popups';
+@import 'components/_categories';
 @import 'components/_swiper-slider';
 
-@import 'layout/section';
-@import 'layout/header';
-@import 'layout/footer';
+@import 'layout/_section';
+@import 'layout/_header';
+@import 'layout/_footer';
